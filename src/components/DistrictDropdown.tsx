@@ -2,22 +2,15 @@
 import { Menu } from "@headlessui/react";
 import { RiMapPinLine, RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri";
 import { housesData } from "@/data";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { HouseContext } from "../context/HouseContext";
 
 const houses = housesData;
 
 export const DistrictDropdown = () => {
-  const [district, setDistrict] = useState("Região: ");
-  const [districts, setDistricts] = useState<string[]>([]);
-
+  const {district, setDistrict, districts} = useContext(HouseContext)
+  
   const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
-    const allDistrict = houses.map((house) =>  house.district
-    )
-
-    setDistricts(allDistrict)
-  }, [])
 
   return (
     <Menu as="div" className="dropdown relative">
@@ -25,11 +18,13 @@ export const DistrictDropdown = () => {
         <RiMapPinLine className="dropdown-icon-primary" />
         <div>
           <div className='text-[15px] font-medium leading-tight'>
-            Região: {district}
+            {
+              district == "Região: " ?( "Região: "): (`Região: ${district}`)
+            }
           </div>
           <div className="text-[13px]">Selecione uma Região</div>
         </div>
-          {isOpen ? (<RiArrowDownSLine className="dropdown-icon-secondary"/>): (<RiArrowUpSLine className="dropdown-icon-secondary"/>)  }
+          {isOpen ? (<RiArrowUpSLine className="dropdown-icon-secondary"/>): (<RiArrowDownSLine className="dropdown-icon-secondary"/>)  }
       </Menu.Button>
       <Menu.Items className="dropdown-menu">
         {districts.map((districtName, i) => {

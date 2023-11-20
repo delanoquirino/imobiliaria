@@ -30,8 +30,8 @@ import Agent6 from '../public/img/agents/agent6.jpg';
 export const housesData = [
     {
         id: 1,
-        type: 'House',
-        name: 'House 1',
+        type: 'Casa',
+        name: 'Casa 1',
         description:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
         image: House1,
@@ -40,7 +40,7 @@ export const housesData = [
         address: 'Rua Bela Vista, 123, Mocambinho',
         bedrooms: '6',
         bathrooms: '3',
-        surface: '4200 sq ft',
+        surface: '4200 m²',
         year: '2016',
         price: '110000',
         agent: {
@@ -51,8 +51,8 @@ export const housesData = [
       },
       {
         id: 2,
-        type: 'House',
-        name: 'House 2',
+        type: 'Casa',
+        name: 'Casa 2',
         description:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
         image: House2,
@@ -61,7 +61,7 @@ export const housesData = [
         address: 'Rua da Felicidade, 123,  Santo Antônio',
         bedrooms: '6',
         bathrooms: '3',
-        surface: '4200 sq ft',
+        surface: '4200 m²',
         year: '2016',
         price: '140000',
         agent: {
@@ -72,8 +72,8 @@ export const housesData = [
       },
       {
         id: 3,
-        type: 'House',
-        name: 'House 3',
+        type: 'Casa',
+        name: 'Casa 3',
         description:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
         image: House3,
@@ -82,7 +82,7 @@ export const housesData = [
         address: 'Rua da União, 123, Ininga',
         bedrooms: '6',
         bathrooms: '3',
-        surface: '4200 sq ft',
+        surface: '4200 m²',
         year: '2016',
         price: '170000',
         agent: {
@@ -94,8 +94,8 @@ export const housesData = [
 
       {
         id: 4,
-        type: 'Apartament',
-        name: 'Apartament 1',
+        type: 'Apartamento',
+        name: 'Apartamento 1',
         description:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
         image: Apartment1,
@@ -104,9 +104,9 @@ export const housesData = [
         address: 'Rua da Liberdade, 123, Lourival Parente',
         bedrooms: '2',
         bathrooms: '1',
-        surface: '1200 sq ft',
+        surface: '1200 m²',
         year: '2012',
-        price: '20000',
+        price: '200000',
         agent: {
           image: Agent4,
           name: 'Lucas Naser',
@@ -115,8 +115,8 @@ export const housesData = [
       },
       {
         id: 5,
-        type: 'Apartament',
-        name: 'Apartament 2',
+        type: 'Apartamento',
+        name: 'Apartamento 2',
         description:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
         image: Apartment2,
@@ -125,9 +125,9 @@ export const housesData = [
         address: 'Rua 13 de Maio, 123, Centro',
         bedrooms: '3',
         bathrooms: '1',
-        surface: '1000 sq ft',
+        surface: '1000 m²',
         year: '2011',
-        price: '30000',
+        price: '200000',
         agent: {
           image: Agent5,
           name: 'Sofia Douglass',
@@ -136,8 +136,8 @@ export const housesData = [
       },
       {
         id: 6,
-        type: 'Apartament',
-        name: 'Apartament 3',
+        type: 'Apartamento',
+        name: 'Apartamento 3',
         description:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
         image: Apartment3,
@@ -146,9 +146,51 @@ export const housesData = [
         address: 'Rua da Comunidade, 123, Buenos Aires',
         bedrooms: '2',
         bathrooms: '1',
-        surface: '1100 sq ft',
+        surface: '1100 m²',
         year: '2011',
-        price: '40000',
+        price: '400000',
+        agent: {
+          image: Agent6,
+          name: 'Isabela Schenck',
+          phone: '0123 456 78910',
+        },
+      },
+      {
+        id: 7,
+        type: 'Apartamento',
+        name: 'Apartamento 3',
+        description:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
+        image: Apartment3,
+        imageLg: Apartment3Lg,
+        district: 'Norte',
+        address: 'Rua da Comunidade, 123, Buenos Aires',
+        bedrooms: '2',
+        bathrooms: '1',
+        surface: '1100 m²',
+        year: '2011',
+        price: '300000',
+        agent: {
+          image: Agent6,
+          name: 'Isabela Schenck',
+          phone: '0123 456 78910',
+        },
+      },
+      {
+        id: 8,
+        type: 'Apartamento',
+        name: 'Apartamento 3',
+        description:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
+        image: Apartment3,
+        imageLg: Apartment3Lg,
+        district: 'Centro-Sul',
+        address: 'Rua da Comunidade, 123, Buenos Aires',
+        bedrooms: '2',
+        bathrooms: '1',
+        surface: '1100 m²',
+        year: '2011',
+        price: '350000',
         agent: {
           image: Agent6,
           name: 'Isabela Schenck',
