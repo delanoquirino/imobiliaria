@@ -2,7 +2,7 @@
 import { Menu } from "@headlessui/react";
 import { RiHome5Line, RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri";
 import { housesData } from "@/data";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { HouseContext } from "../context/HouseContext";
 
 const houses = housesData;
@@ -12,8 +12,6 @@ export const PropertyDropdown = () => {
   const {property, setProperty, properties} = useContext(HouseContext)
 
   const [isOpen, setIsOpen] = useState(false);
-
-  
 
   return (
     <Menu as="div" className="dropdown relative">

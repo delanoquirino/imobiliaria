@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { LoginButton } from "./LoginButton";
+import { NavLink } from "./NavLink";
 
 export const Header = () => {
   return (
@@ -9,7 +9,7 @@ export const Header = () => {
         <div>
           <Link href="/">Imóveis Prime</Link>
         </div>
-        <LoginButton/>
+        <NavLink/>
       </div>
     </header>
   );

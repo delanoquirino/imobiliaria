@@ -5,7 +5,7 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { HouseContextProvider } from "@/context/HouseContext";
-
+import { AuthProvider  } from '@/providers/auth-provider'
 const roboto = Roboto({
   weight: "400",
   subsets: ["latin"],
@@ -17,16 +17,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-br">
-      <body className={roboto.className}>
-        <HouseContextProvider>
+    <AuthProvider >
+    <HouseContextProvider>
+      <html lang="pt-br">
+        <body className={roboto.className}>
           <main className="max-w-[1440px] mx-auto bg-white">
             <Header />
             {children}
             <Footer />
           </main>
-        </HouseContextProvider>
-      </body>
-    </html>
+        </body>
+      </html>
+    </HouseContextProvider>
+    </AuthProvider>
   );
 }
