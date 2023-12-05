@@ -1,6 +1,5 @@
 "use client"
 
-import { housesData } from "@/data";
 import Link from "next/link";
 import { House } from "./House";
 import { useContext } from "react";

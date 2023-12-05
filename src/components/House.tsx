@@ -1,12 +1,29 @@
 
-import Image from "next/image"
+import Image, { StaticImageData } from "next/image"
 import { BiBed, BiBath, BiArea } from "react-icons/bi"
 
-export const House = ({house}) => {
-  const {image, type, district, address, bedrooms, bathrooms, surface, price} = house
-  const priceBr = parseFloat(house.price)
-  const formattedPriceBR = priceBr.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+interface HouseProps {
+  house: {
+    id: number;
+    type: string;
+    name: string;
+    description: string;
+    image: StaticImageData;
+    imageLg: StaticImageData;
+    district: string;
+    address: string;
+    bedrooms: string; 
+    bathrooms: string; 
+    surface: string; 
+    year: string; 
+    price: string;
+  };
+}
 
+export const House = ({house}: HouseProps) => {
+  const {image, type, district, address, bedrooms, bathrooms, surface, price} = house
+  const priceBr = parseFloat(price)
+  const formattedPriceBR = priceBr.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
  
 
   return (
