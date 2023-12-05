@@ -2,13 +2,13 @@
 import { Menu } from "@headlessui/react";
 import { RiMapPinLine, RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri";
 
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { HouseContext } from "../context/HouseContext";
 
 
 export const DistrictDropdown = () => {
-  const {district, setDistrict, districts} = useContext(HouseContext)
-  
+  const { district, setDistrict, districts } = useContext(HouseContext);
+
   const [isOpen, setIsOpen] = useState(false);
   
   return (

@@ -35,17 +35,31 @@ interface HouseContextType {
   handleClick: () => void;
 }
 
-export const HouseContext = createContext<HouseContextType | "" >("");
+const initialHouseContext: HouseContextType = {
+  houses: [], 
+  district: "Todas",
+  setDistrict: () => {},
+  districts: [], 
+  property: "Todas",
+  setProperty: () => {},
+  properties: [], 
+  price: "Todas",
+  setPrice: () => {},
+  loading: false,
+  handleClick: () => {},
+};
+
+export const HouseContext = createContext<HouseContextType>(initialHouseContext);
 
 export const HouseContextProvider: React.FC<HouseContextProviderProps> = ({
   children,
 }) => {
   const [houses, setHouses] = useState(housesData);
-  const [district, setDistrict] = useState("Todas");
+  const [district, setDistrict] = useState<string>("Todas");
   const [districts, setDistricts] = useState<string[]>([]);
   const [property, setProperty] = useState("Todas");
   const [properties, setProperties] = useState<string[]>([]);
-  const [price, setPrice] = useState("Todas");
+  const [price, setPrice] = useState<string>("Todas");
   const [loading, setLoading] = useState(false);
 
   // distric
