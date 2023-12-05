@@ -55,7 +55,7 @@ export const PriceRangeDropdownt = () => {
       <Menu.Items className="dropdown-menu">
         {prices.map((price, i) => {
           return (
-            <Menu.Item onClick={() => setPrice(price.value)} className="cursor-pointer hover:text-emerald-700 transition " as='li' key={`i + ${price.value}`}>{price.value}</Menu.Item>
+            <Menu.Item onClick={() => setPrice(price.value)} className="cursor-pointer hover:text-emerald-700 hover:bg-emerald-200 p-1 transition " as='li' key={`i + ${price.value}`}>{price.value}</Menu.Item>
           )
         })}
       </Menu.Items>

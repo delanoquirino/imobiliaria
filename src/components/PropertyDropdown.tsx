@@ -1,11 +1,12 @@
 "use client";
 import { Menu } from "@headlessui/react";
-import { RiHome5Line, RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri";
-import { housesData } from "@/data";
+import { RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri";
+import { BsHouseDoor } from "react-icons/bs";
+
 import { useContext, useState } from "react";
 import { HouseContext } from "../context/HouseContext";
 
-const houses = housesData;
+
 
 export const PropertyDropdown = () => {
  
@@ -16,7 +17,7 @@ export const PropertyDropdown = () => {
   return (
     <Menu as="div" className="dropdown relative">
       <Menu.Button onClick={() => setIsOpen(!isOpen)} className="dropdown-btn w-full text-left py-5">
-        <RiHome5Line className="dropdown-icon-primary" />
+        <BsHouseDoor className="dropdown-icon-primary" />
         <div>
           <div className='text-[15px] font-medium leading-tight'>
             {
@@ -30,7 +31,7 @@ export const PropertyDropdown = () => {
       <Menu.Items className="dropdown-menu">
         {properties.map((PropertiesName: string, i: number) => {
           return (
-            <Menu.Item onClick={() => setProperty(PropertiesName)} className="cursor-pointer hover:text-emerald-700 transition " as='li' key={`i + ${PropertiesName}`}>{PropertiesName}</Menu.Item>
+            <Menu.Item onClick={() => setProperty(PropertiesName)} className="cursor-pointer hover:text-emerald-700 hover:bg-emerald-200 p-1 transition " as='li' key={`i + ${PropertiesName}`}>{PropertiesName}</Menu.Item>
           )
         })}
       </Menu.Items>

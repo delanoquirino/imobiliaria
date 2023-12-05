@@ -1,12 +1,41 @@
 "use client";
 import { ReactNode, createContext, useEffect, useState } from "react";
 import { housesData } from "../data";
+import { StaticImageData } from "next/image";
 
 interface HouseContextProviderProps {
   children: ReactNode;
 }
 
-export const HouseContext = createContext("");
+interface HouseContextType {
+  houses: {
+    id: number;
+  type: string;
+  name: string;
+  description: string;
+  image: StaticImageData;
+  imageLg: StaticImageData;
+  district: string;
+  address: string;
+  bedrooms: string; 
+  bathrooms: string; 
+  surface: string; 
+  year: string; 
+  price: string;
+  }[];
+  district: string;
+  setDistrict: React.Dispatch<React.SetStateAction<string>>;
+  districts: string[];
+  property: string;
+  setProperty: React.Dispatch<React.SetStateAction<string>>;
+  properties: string[];
+  price: string;
+  setPrice: React.Dispatch<React.SetStateAction<string>>;
+  loading: boolean;
+  handleClick: () => void;
+}
+
+export const HouseContext = createContext<HouseContextType | "" >("");
 
 export const HouseContextProvider: React.FC<HouseContextProviderProps> = ({
   children,
@@ -42,7 +71,7 @@ export const HouseContextProvider: React.FC<HouseContextProviderProps> = ({
     setLoading(true);
 
     const isDefault = (str: string) => {
-      return str.split().includes("Todas");
+      return str.includes("Todas");
     };
 
     // filter price
@@ -121,14 +150,4 @@ export const HouseContextProvider: React.FC<HouseContextProviderProps> = ({
   );
 };
 
-/*
-  
-  const [houses, setHouses] = useState(housesData);
-  const [district, setDistrict] = useState("Região: ");
-  const [districts, setDistricts] = useState<string[]>([]);
-  const [property, setProperty] = useState("Propriedade:");
-  const [properties, setProperties] = useState<string[]>([]);
-   const [price, setPrice] = useState("Preço: ");
-  const [loading, setLoading] = useState(false);
 
-*/
